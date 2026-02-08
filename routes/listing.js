@@ -36,6 +36,22 @@ router.get(
   }),
 );
 
+
+// GET listings by category
+router.get("/category/:category", async (req, res) => {
+  try {
+    const category = req.params.category;
+    const listings = await Listing.find({ category });
+
+    // EJS template render karo
+    res.render("listings/index", { allListings: listings });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+
 //new route
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 
