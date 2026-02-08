@@ -1,30 +1,157 @@
 <% layout("/layouts/boilerplate") %>
- <style>
-#filters{
-  margin-top: 2rem;
-}
-.tax-info {
-  display: none;
-}
-.tax-toggle {
-  border: 1px solid black;
-  border-radius: 1rem;
-  height: 3.25rem;
-  padding: 1rem;
-  margin-left: 65rem;
-  display: flex;
-  align-items: center;
+<%= error %>
+<body>
+    
+   <!-- <h3>All Listings</h3> -->
+   <!-- <form action="/listings/new" method="get" >
+        <button>Create New Listing</button>
+   </form> -->
+<style>
+     #filters{
+         
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+     }
+     .filter{
+         text-align: center;
+          margin-right: 2rem;
+          margin-top: 1.5rem;
+          opacity: 0.8;
+     }
+
+     .filter:hover{
+          cursor: pointer;
+          opacity: 1;
+     }
+
+     .para{
+          margin-top: 0.3rem;
+          font-size: 0.8rem;
+     }
+
+     .tax-info{
+          display: none;
+     }
+
+     .tax-toggle{
+          
+          border: 1px solid black;
+          border-radius: 1rem;
+          height: 3.5rem;
+          padding: 1rem;
+         
+          margin-top: 1rem;
+     }
+     .filter-link {
+          text-decoration: none;   /* remove underline */
+          color: inherit;          /* inherit text color */
+          display: inline-block;   /* behave like a block */
 }
 
-</style> 
-  
-  <div id="filters">
+</style>
+
+
+<div id="filters">
+    <div id="filters">
+
+  <a href= "/listings/category/Trending" class="filter-link">
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <div class="para">Trending</div>
+    </div>
+  </a>
+
+  <a  href="/listings/category/Rooms" class="filter-link">
+    <div class="filter">
+      <div><i class="fa-solid fa-bed"></i></div>
+      <div class="para">Rooms</div>
+    </div>
+  </a>
+
+  <a  href="/listings/category/Iconic Cities" class="filter-link">
+    <div class="filter">
+      <div><i class="fa-solid fa-mountain-city"></i></div>
+      <div class="para">Iconic Cities</div>
+    </div>
+  </a>
+
+  <a  href="/listings/category/Mountains"class="filter-link">
+    <div class="filter">
+      <div><i class="fa-solid fa-mountain"></i></div>
+      <div class="para">Mountains</div>
+    </div>
+  </a>
+
+  <a  href="/listings/category/Amazing Pools" class="filter-link">
+    <div class="filter">
+      <div><i class="fa-solid fa-person-swimming"></i></div>
+      <div class="para">Amazing Pools</div>
+    </div>
+  </a>
+
+  <a  href="/listings/category/Castles" class="filter-link">
+    <div class="filter">
+      <div><i class="fa-brands fa-fort-awesome"></i></div>
+      <div class="para">Castles</div>
+    </div>
+  </a>
+
+  <a  href="/listings/category/Camping" class="filter-link">
+    <div class="filter">
+      <div><i class="fa-solid fa-binoculars"></i></div>
+      <div class="para">Camping</div>
+    </div>
+  </a>
+
+  <a  href="/listings/category/Farms" class="filter-link">
+    <div class="filter">
+      <div><i class="fa-solid fa-tractor"></i></div>
+      <div class="para">Farms</div>
+    </div>
+  </a>
+
+  <a  href="/listings/category/Arctic" class="filter-link">
+    <div class="filter">
+      <div><i class="fa-regular fa-snowflake"></i></div>
+      <div class="para">Arctic</div>
+    </div>
+  </a>
+
+  <a  href="/listings/category/Beach" class="filter-link">
+    <div class="filter">
+      <div><i class="fa-solid fa-umbrella-beach"></i></div>
+      <div class="para">Beach</div>
+    </div>
+  </a>
+
+  <a  href="/listings/category/Amazing Views" class="filter-link">
+    <div class="filter">
+      <div><i class="fa-solid fa-images"></i></div>
+      <div class="para">Amazing Views</div>
+    </div>
+  </a>
+ 
+
+  <a  href="/listings/category/Lakefront" class="filter-link">
+    <div class="filter">
+      <div><i class="fa-solid fa-house-flood-water"></i></div>
+      <div class="para">Lakefront</div>
+    </div>
+  </a>
+
     <div class="tax-toggle">
     <div class="form-check-reverse form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
   <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes</label>
 </div>
     </div>
+
+ 
+</div>
+
+    
+    
     </div>
  
   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3  ">
